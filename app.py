@@ -1,15 +1,8 @@
 from dash import Dash, html, dcc
-import os
 import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
-
-colors = {
-    'background': '#d3d3d3',
-    'featured': '#00a3e0',
-    'text': '#212121'
-}
 
 case_df = pd.read_csv('data/cs_data.csv')
 case_df["Platform"].fillna("No Platform", inplace=True)
