@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 
 app = Dash(__name__)
+server = app.server
 
 case_df = pd.read_csv('data/cs_data.csv')
 case_df["Platform"].fillna("No Platform", inplace=True)
